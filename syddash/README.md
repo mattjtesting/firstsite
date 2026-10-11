@@ -1,7 +1,9 @@
 # syddash
 
-A static "Sydney Today" dashboard, meant to be served at the `syddash` subdomain
-(e.g. `syddash.<your-domain>`). Point that subdomain's web root at this folder.
+A static "Sydney Today" dashboard, served at https://syddash.mjtestsite.com via Cloudflare Pages.
+
+Cloudflare Pages settings for this repo: no build command (framework preset "None"),
+build output directory `syddash`. Cloudflare deploys whatever is on the production branch.
 
 It shows:
 
