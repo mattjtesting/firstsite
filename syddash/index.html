@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sydney Today</title>
+  <meta name="description" content="Today's dashboard for Sydney: local time, current weather and the next plane due to land at Sydney Airport.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Sydney Today</h1>
+    <p id="date" class="muted">&nbsp;</p>
+  </header>
+
+  <main class="grid">
+    <section class="card" aria-labelledby="time-h">
+      <h2 id="time-h">Local time</h2>
+      <p id="clock" class="big" aria-live="off">--:--:--</p>
+      <p id="tz" class="muted">&nbsp;</p>
+    </section>
+
+    <section class="card" aria-labelledby="wx-h">
+      <h2 id="wx-h">Weather</h2>
+      <div id="weather" class="state">Loading weather…</div>
+    </section>
+
+    <section class="card wide" aria-labelledby="fl-h">
+      <h2 id="fl-h">Next to land at Sydney Airport (SYD)</h2>
+      <div id="flight" class="state">Looking for arriving aircraft…</div>
+      <ol id="queue" class="queue" hidden></ol>
+      <p class="muted small">Estimated from live ADS-B positions of aircraft descending toward SYD. Refreshes every 30 seconds.
+        <span id="flight-updated"></span></p>
+    </section>
+  </main>
+
+  <footer class="small">
+    Weather by <a href="https://open-meteo.com/">Open-Meteo</a> · Aircraft data by
+    <a href="https://adsb.lol/">adsb.lol</a> / <a href="https://airplanes.live/">airplanes.live</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
