@@ -1,9 +1,8 @@
 # syddash
 
-A static "Sydney Today" dashboard, served at https://syddash.mjtestsite.com via Cloudflare Pages.
-
-Cloudflare Pages settings for this repo: no build command (framework preset "None"),
-build output directory `syddash`. Cloudflare deploys whatever is on the production branch.
+A static "Sydney Today" dashboard, served at https://syddash.mjtestsite.com as a Cloudflare Worker
+with static assets. `wrangler.jsonc` at the repo root tells Workers Builds to publish this folder
+(no build step); Cloudflare deploys whatever is on the production branch.
 
 It shows:
 
